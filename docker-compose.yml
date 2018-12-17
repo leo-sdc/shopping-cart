@@ -1,0 +1,14 @@
+version: '2.0'
+
+services:
+
+  shopping-cart:
+    container_name: shopping-cart
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '4200:4200'

@@ -1,0 +1,11 @@
+<div *ngIf="total > 0">
+  <h2>Cart</h2>
+  <ul class="cart">
+    <li *ngFor="let product of products">
+      <span class="badge">{{product.id}}</span> {{product.name}} - {{product.value}}
+      <button (click)="onSelect(product)">Remove</button>
+    </li>
+  </ul>
+  <span>Total:</span> {{total}}
+  <button (click)="onPay()">Pay</button>
+</div>
